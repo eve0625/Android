@@ -4,10 +4,12 @@ public class Picture {
 
     private String thumbID;
     private String thumbData;
+    private int orientation;
 
-    public Picture(String thumbID, String thumbData) {
+    public Picture(String thumbID, String thumbData, int orientation) {
         this.thumbID = thumbID;
         this.thumbData = thumbData;
+        this.orientation = orientation;
     }
 
     public String getThumbID() {
@@ -26,4 +28,11 @@ public class Picture {
         this.thumbData = thumbData;
     }
 
+    public int getOrientation() {
+        return orientation;
+    }
+
+    public void setOrientation(int orientation) {
+        this.orientation = orientation;
+    }
 }

@@ -62,7 +62,8 @@ public class PictureGridActivity extends AppCompatActivity {
         Log.d(LOG_TAG, "Picture Count : " + cursor.getCount());
 
         if (cursor.moveToFirst()) {
-            String id, orientation, data, displayName;
+            String id, data, displayName;
+            int orientation;
             long dateTaken, size;
 
             int colIndexId = cursor.getColumnIndex(columns[0]);
@@ -75,12 +76,12 @@ public class PictureGridActivity extends AppCompatActivity {
             do {
                 id = cursor.getString(colIndexId);
                 dateTaken = cursor.getLong(colIndexDateTaken);
-                orientation = cursor.getString(colIndexOrientation);
+                orientation = cursor.getInt(colIndexOrientation);
                 data = cursor.getString(colIndexData);
                 size = cursor.getLong(colIndexSize);
                 displayName = cursor.getString(colIndexDisplayName);
 
-                adapter.addItem(new Picture(id, data));
+                adapter.addItem(new Picture(id, data, orientation));
 
                 Log.d(LOG_TAG, String.format("(%s) %s (date:%d, orientation:%s, data:%s, size:%d)",
                         id, displayName, dateTaken, orientation, data, size));

@@ -76,11 +76,11 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.PictureV
                 bitmap.recycle();
                 bitmap = null;
             }
-            bitmap = getPhotoBitmap(picture.getThumbData(), size);
+            bitmap = getPhotoBitmap(picture.getThumbData(), picture.getOrientation(), size);
             mImageView.setImageBitmap(bitmap);
         }
 
-        private Bitmap getPhotoBitmap(String imageFilePath, int size) {
+        private Bitmap getPhotoBitmap(String imageFilePath, int orientation, int size) {
 
             //원본 이미지의 크기를 구해 scaleFactor를 계산
             BitmapFactory.Options options = new BitmapFactory.Options();
@@ -95,10 +95,11 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.PictureV
             options.inPurgeable = true;
             Bitmap bitmap = BitmapFactory.decodeFile(imageFilePath, options);
 
-            Matrix matrix = BitmapUtil.getBitmapMatrix(imageFilePath);
-            Bitmap rotateBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+            Matrix matrix = new Matrix();
+            matrix.setRotate(orientation);
+            Bitmap resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
 
-            return rotateBitmap;
+            return resizedBitmap;
 
         /*
         //보여줄 사이즈, 뱡향 조정
