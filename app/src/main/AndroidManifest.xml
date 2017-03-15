@@ -21,7 +21,8 @@
         <activity
             android:name=".ImagePickActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".PictureGridActivity"></activity>
+        <activity android:name=".PictureGridActivity" android:screenOrientation="portrait"></activity>
+        <activity android:name=".ThumbnailGridActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

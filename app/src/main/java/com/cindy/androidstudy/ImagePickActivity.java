@@ -126,7 +126,7 @@ public class ImagePickActivity extends AppCompatActivity implements View.OnClick
             }
             break;
             case R.id.btn_retrieve_file : {
-                Intent intent = new Intent(this, PictureGridActivity.class);
+                Intent intent = new Intent(this, ThumbnailGridActivity.class);
                 startActivity(intent);
             }
             break;

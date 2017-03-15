@@ -2,21 +2,21 @@ package com.cindy.androidstudy.data;
 
 public class Picture {
 
-    private String thumbID;
+    private int thumbID;
     private String thumbData;
     private int orientation;
 
-    public Picture(String thumbID, String thumbData, int orientation) {
+    public Picture(int thumbID, String thumbData, int orientation) {
         this.thumbID = thumbID;
         this.thumbData = thumbData;
         this.orientation = orientation;
     }
 
-    public String getThumbID() {
+    public int getThumbID() {
         return thumbID;
     }
 
-    public void setThumbID(String thumbID) {
+    public void setThumbID(int thumbID) {
         this.thumbID = thumbID;
     }
 
