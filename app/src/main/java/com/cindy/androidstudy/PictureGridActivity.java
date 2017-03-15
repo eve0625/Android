@@ -17,6 +17,7 @@ public class PictureGridActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = "PictureGridActivity";
 
+    private static final int GRID_COL_COUNT = 3;
     private RecyclerView mRecyclerView;
     private GridLayoutManager mLayoutManager;
     private PictureAdapter mAdapter;
@@ -29,10 +30,10 @@ public class PictureGridActivity extends AppCompatActivity {
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         mRecyclerView.setHasFixedSize(true);
 
-        mLayoutManager = new GridLayoutManager(this, 3);
+        mLayoutManager = new GridLayoutManager(this, GRID_COL_COUNT);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        mAdapter = new PictureAdapter(this);
+        mAdapter = new PictureAdapter(this, mLayoutManager.getSpanCount());
         getPictureData(mAdapter); //사진 목록 조회
         mRecyclerView.setAdapter(mAdapter);
 
