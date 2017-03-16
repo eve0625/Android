@@ -56,51 +56,28 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.PictureV
         return items.size();
     }
 
-    //======== View Holder
+    private Bitmap getPhotoBitmap(String imageFilePath) {
 
-    public class PictureViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        //원본 이미지의 크기를 구해 scaleFactor를 계산
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(imageFilePath, options);
 
-        public Picture mData;
-        public Bitmap bitmap;
-        public SquareImageView mImageView;
+        int size = columnWidth;
 
-        public PictureViewHolder(View v) {
-            super(v);
-            mImageView = (SquareImageView) v;
-            mImageView.setOnClickListener(this);
-        }
+        int scaleFactor = BitmapUtil.calculateInSampleSize(options.outWidth, options.outHeight, size, size);
 
-        public void setPicture(Picture picture, int size) {
-            mData = picture;
-            if (bitmap != null) {
-                bitmap.recycle();
-                bitmap = null;
-            }
-            bitmap = getPhotoBitmap(picture.getThumbData(), picture.getOrientation(), size);
-            mImageView.setImageBitmap(bitmap);
-        }
+        //구해진 scaleFactor로 비트맵을 생성
+        options.inJustDecodeBounds = false;
+        options.inSampleSize = scaleFactor;
+        options.inPurgeable = true;
+        Bitmap bitmap = BitmapFactory.decodeFile(imageFilePath, options);
 
-        private Bitmap getPhotoBitmap(String imageFilePath, int orientation, int size) {
+        Matrix matrix = BitmapUtil.getBitmapMatrix(imageFilePath);
+        Bitmap rotateBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
 
-            //원본 이미지의 크기를 구해 scaleFactor를 계산
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inJustDecodeBounds = true;
-            BitmapFactory.decodeFile(imageFilePath, options);
-
-            int scaleFactor = BitmapUtil.calculateInSampleSize(options.outWidth, options.outHeight, size, size);
-
-            //구해진 scaleFactor로 비트맵을 생성
-            options.inJustDecodeBounds = false;
-            options.inSampleSize = scaleFactor;
-            options.inPurgeable = true;
-            Bitmap bitmap = BitmapFactory.decodeFile(imageFilePath, options);
-
-            Matrix matrix = new Matrix();
-            matrix.setRotate(orientation);
-            Bitmap resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-
-            return resizedBitmap;
-
+        return rotateBitmap;
+        
         /*
         //보여줄 사이즈, 뱡향 조정
         int resize = Math.min(bitmap.getWidth(), bitmap.getHeight());
@@ -111,6 +88,24 @@ public class PictureAdapter extends RecyclerView.Adapter<PictureAdapter.PictureV
 
         Bitmap resizedBitmap = Bitmap.createBitmap(bitmap, x, y, width, height, matrix, true);
         */
+    }
+
+    //======== View Holder
+
+    public class PictureViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
+        public Picture mData;
+        public SquareImageView mImageView;
+
+        public PictureViewHolder(View v) {
+            super(v);
+            mImageView = (SquareImageView) v;
+            mImageView.setOnClickListener(this);
+        }
+
+        public void setPicture(Picture picture) {
+            mData = picture;
+            mImageView.setImageBitmap(getPhotoBitmap(picture.getThumbData()));
         }
 
         @Override
