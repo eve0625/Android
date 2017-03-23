@@ -14,17 +14,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
-    public void onButtonClick(View view) {
-
-        Intent intent = new Intent();
-
-        switch (view.getId()) {
-            case R.id.btn_pick_photo :
-                intent.setClass(this, ImagePickActivity.class);
-                break;
-        }
-
-        startActivity(intent);
-    }
+    
 }

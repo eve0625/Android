@@ -14,15 +14,9 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ImagePickActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".PictureGridActivity" android:screenOrientation="portrait"></activity>
-        <activity android:name=".ThumbnailGridActivity" android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
