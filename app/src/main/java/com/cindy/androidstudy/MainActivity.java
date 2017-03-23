@@ -14,5 +14,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    
+
+    public void onClickButton(View view) {
+
+        Intent intent = new Intent();
+        switch (view.getId()) {
+            case R.id.btn_full_screen : { //전체화면 모드
+                intent.setClass(this, FullScreenActivity.class);
+                startActivity(intent);
+            }
+            break;
+        }
+    }
+
 }
