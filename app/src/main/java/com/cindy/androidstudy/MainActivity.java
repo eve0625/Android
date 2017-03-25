@@ -7,6 +7,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.cindy.androidstudy.surfaceview.SurfaceViewActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -22,8 +24,13 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_full_screen : { //전체화면 모드
                 intent.setClass(this, FullScreenActivity.class);
                 startActivity(intent);
+                break;
             }
-            break;
+            case R.id.btn_surface_view : {
+                intent.setClass(this, SurfaceViewActivity.class);
+                startActivity(intent);
+                break;
+            }
         }
     }
 
