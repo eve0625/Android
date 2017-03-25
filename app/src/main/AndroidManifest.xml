@@ -7,6 +7,7 @@
     <!-- 카메라가 없는 장치에서는 이 어플리 아예 설정되지 않도록 하는 옵션 -->
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -24,7 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".FullScreenActivity" />
-        <activity android:name=".surfaceview.SurfaceViewActivity"></activity>
+        <activity android:name=".surfaceview.SurfaceViewActivity" />
+        <activity android:name=".dialog.ProgressDialogActivity"></activity>
     </application>
 
 </manifest>

@@ -20,4 +20,11 @@
         android:text="Surface View"
         android:onClick="onClickButton" />
 
+    <Button
+        android:id="@+id/btn_progress_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Progress Dialog"
+        android:onClick="onClickButton" />
+
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.cindy.androidstudy.dialog.ProgressDialogActivity;
 import com.cindy.androidstudy.surfaceview.SurfaceViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
             }
             case R.id.btn_surface_view : {
                 intent.setClass(this, SurfaceViewActivity.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.btn_progress_dialog : {
+                intent.setClass(this, ProgressDialogActivity.class);
                 startActivity(intent);
                 break;
             }
