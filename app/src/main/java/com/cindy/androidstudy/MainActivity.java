@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.cindy.androidstudy.dialog.ProgressDialogActivity;
+import com.cindy.androidstudy.dialog.DialogActivity;
 import com.cindy.androidstudy.surfaceview.SurfaceViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,13 +32,11 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             }
-            /*
-            case R.id.btn_progress_dialog : {
-                intent.setClass(this, ProgressDialogActivity.class);
+            case R.id.btn_dialog : {
+                intent.setClass(this, DialogActivity.class);
                 startActivity(intent);
                 break;
             }
-            */
             case R.id.btn_floating_action_button : {
                 intent.setClass(this, FloatingActionButtonActivity.class);
                 startActivity(intent);

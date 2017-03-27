@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cindy.androidstudy.dialog.ProgressDialogActivity">
+    tools:context="com.cindy.androidstudy.dialog.DialogActivity">
 
     <Button
         android:id="@+id/btn_spin_progress_dialog"
@@ -18,5 +18,12 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/btn_spin_progress_dialog"
         android:text="bar progress dialog" />
+
+    <Button
+        android:id="@+id/btn_alert_dialog"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btn_bar_progress_dialog"
+        android:text="alert dialog" />
 
 </android.support.constraint.ConstraintLayout>

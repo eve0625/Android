@@ -26,11 +26,11 @@
         </activity>
         <activity android:name=".FullScreenActivity" />
         <activity android:name=".surfaceview.SurfaceViewActivity" />
-        <activity android:name=".dialog.ProgressDialogActivity" />
         <activity
             android:name=".FloatingActionButtonActivity"
             android:label="@string/title_activity_floating_action_button"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>]
+        <activity android:name=".dialog.DialogActivity"></activity>
     </application>
 
 </manifest>

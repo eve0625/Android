@@ -21,6 +21,13 @@
         android:onClick="onClickButton" />
 
     <Button
+        android:id="@+id/btn_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Dialog"
+        android:onClick="onClickButton" />
+
+    <Button
         android:id="@+id/btn_floating_action_button"
         android:layout_width="match_parent"
         android:layout_height="50dp"
