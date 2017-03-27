@@ -32,8 +32,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             }
+            /*
             case R.id.btn_progress_dialog : {
                 intent.setClass(this, ProgressDialogActivity.class);
+                startActivity(intent);
+                break;
+            }
+            */
+            case R.id.btn_floating_action_button : {
+                intent.setClass(this, FloatingActionButtonActivity.class);
                 startActivity(intent);
                 break;
             }
