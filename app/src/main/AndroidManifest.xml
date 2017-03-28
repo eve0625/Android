@@ -27,10 +27,12 @@
         <activity android:name=".FullScreenActivity" />
         <activity android:name=".surfaceview.SurfaceViewActivity" />
         <activity
-            android:name=".FloatingActionButtonActivity"
+            android:name=".fab.FABActivity"
             android:label="@string/title_activity_floating_action_button"
-            android:theme="@style/AppTheme.NoActionBar"></activity>]
-        <activity android:name=".dialog.DialogActivity"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        ]
+        <activity android:name=".dialog.DialogActivity" />
+        <activity android:name=".fab.FABLibActivity"></activity>
     </application>
 
 </manifest>

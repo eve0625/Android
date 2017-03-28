@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cindy.androidstudy.FloatingActionButtonActivity">
+    tools:context="com.cindy.androidstudy.fab.FABActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -14,16 +14,21 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
+    <!--
+        dim 배경을 따로 만들어줘야 하고, show/hide animation등이 귀찮고 안예쁨.
+        레이블 표시도 따로 없어서 만들어줘야 하겠는걸.
+        -->
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize">
+        android:layout_marginTop="50dp">
 
         <TextView
             android:id="@+id/tv_content"
@@ -46,35 +51,53 @@
         android:id="@+id/fab1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="#ff0000"
-        app:srcCompat="@android:drawable/ic_dialog_info" />
+        app:fab_label="워치상태"
+        app:backgroundTint="#15e9fb"
+        app:fab_size="mini"
+        app:srcCompat="@drawable/ic_watch" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="#00ff00"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:fab_label="현재위치"
+        app:backgroundTint="#21c95e"
+        app:fab_size="mini"
+        app:srcCompat="@drawable/ic_place" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="@dimen/fab_margin"
-        app:backgroundTint="#0000ff"
-        app:srcCompat="@android:drawable/ic_dialog_alert" />
+        app:fab_label="미션"
+        app:backgroundTint="#582ba0"
+        app:fab_size="mini"
+        app:srcCompat="@drawable/ic_calendar" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="@dimen/fab_margin"
+        app:fab_label="캐시비"
+        app:backgroundTint="#fbcf4f"
+        app:fab_size="mini"
+        app:srcCompat="@drawable/ic_money" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="@dimen/fab_margin"
+        app:fab_size="normal"
         app:srcCompat="@android:drawable/ic_input_add" />
 
 </FrameLayout>

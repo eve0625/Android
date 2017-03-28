@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cindy.androidstudy.fab.FABLibActivity">
+
+    <!--
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/fab_add"
+        fab:fab_colorNormal="@color/colorPrimary"
+        fab:fab_colorPressed="@color/colorPrimaryDark"
+        fab:fab_showAnimation="@anim/fab_scale_up"
+        fab:fab_hideAnimation="@anim/fab_scale_down"
+        />
+        -->
+
+    <!--
+        clans :
+        1. 배경을 dim 처리 하려면 레이아웃을 전체로 해야하고, 메뉴 버튼 정렬이 불가.(우측 하단으로 고정됨)
+        2. 버튼 레이블의 텍스트 배경색 및 글씨체 변경이 불가
+
+    -->
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/fab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        fab:menu_backgroundColor="#88000000"
+        fab:menu_fab_show_animation="@anim/fab_scale_up">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/sub_fab_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_watch"
+            android:scaleType="centerInside"
+            fab:fab_colorNormal="#15e9fb"
+            fab:fab_size="normal"
+            fab:fab_label="워치상태"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/sub_fab_2"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_place"
+            android:scaleType="centerInside"
+            fab:fab_colorNormal="#21c95e"
+            fab:fab_size="normal"
+            fab:fab_label="현재위치" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/sub_fab_3"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_calendar"
+            android:scaleType="centerInside"
+            fab:fab_colorNormal="#5826a0"
+            fab:fab_size="normal"
+            fab:fab_label="미션" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/sub_fab_4"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_money"
+            android:scaleType="centerInside"
+            fab:fab_colorNormal="#fbcf4f"
+            fab:fab_size="normal"
+            fab:fab_label="캐시비" />
+
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
