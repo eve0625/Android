@@ -1,20 +1,22 @@
-package com.cindy.androidstudy;
+package com.cindy.androidstudy.fab;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
-public class FloatingActionButtonActivity extends AppCompatActivity {
+import com.cindy.androidstudy.R;
+
+public class FABActivity extends AppCompatActivity {
 
     boolean sIsFabMenuOpen = false;
     View dim;
     FloatingActionButton fab1;
     FloatingActionButton fab2;
     FloatingActionButton fab3;
+    FloatingActionButton fab4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class FloatingActionButtonActivity extends AppCompatActivity {
         findViewById(R.id.tv_content).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(FloatingActionButtonActivity.this, "Click", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FABActivity.this, "Click", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -40,6 +42,7 @@ public class FloatingActionButtonActivity extends AppCompatActivity {
         fab1 = (FloatingActionButton) findViewById(R.id.fab1);
         fab2 = (FloatingActionButton) findViewById(R.id.fab2);
         fab3 = (FloatingActionButton) findViewById(R.id.fab3);
+        fab4 = (FloatingActionButton) findViewById(R.id.fab4);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -56,12 +59,14 @@ public class FloatingActionButtonActivity extends AppCompatActivity {
             fab1.animate().translationYBy(300).rotation(-360).setDuration(300);
             fab2.animate().translationYBy(550).rotation(-360).setDuration(300);
             fab3.animate().translationYBy(800).rotation(-360).setDuration(300);
+            fab4.animate().translationYBy(1050).rotation(-360).setDuration(300);
             dim.setVisibility(View.INVISIBLE);
         } else {
             dim.setVisibility(View.VISIBLE);
             fab1.animate().translationYBy(-1 * 300).rotation(360).setDuration(300);
             fab2.animate().translationYBy(-1 * 550).rotation(360).setDuration(300);
             fab3.animate().translationYBy(-1 * 800).rotation(360).setDuration(300);
+            fab4.animate().translationYBy(-1 * 1050).rotation(360).setDuration(300);
         }
         sIsFabMenuOpen = !sIsFabMenuOpen;
     }
