@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "473777756504",
+    "firebase_url": "https://androidstudy-a214b.firebaseio.com",
+    "project_id": "androidstudy-a214b",
+    "storage_bucket": "androidstudy-a214b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:473777756504:android:75277783aef52e69",
+        "android_client_info": {
+          "package_name": "com.cindy.androidstudy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "473777756504-c9o57sp0ei53clfa8h986rgh2lr06nbu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cindy.androidstudy",
+            "certificate_hash": "4acabe5433891b5c835ac3c54c859516eb6f3b9f"
+          }
+        },
+        {
+          "client_id": "473777756504-cvcf9s97a8qoq128r91bef2hmadsig3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj7LXAWOJJ2Lrzx6wP0Q3eerliiFnlXUg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "473777756504-cvcf9s97a8qoq128r91bef2hmadsig3a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

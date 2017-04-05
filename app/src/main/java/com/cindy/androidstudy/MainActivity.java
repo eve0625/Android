@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.cindy.androidstudy.dialog.DialogActivity;
-import com.cindy.androidstudy.fab.FABActivity;
 import com.cindy.androidstudy.fab.FABLibActivity;
+import com.cindy.androidstudy.push.FCMActivity;
 import com.cindy.androidstudy.surfaceview.SurfaceViewActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(this, FABLibActivity.class);
                 startActivity(intent);
                 break;
+            }
+            case R.id.btn_fcm : {
+                intent.setClass(this, FCMActivity.class);
+                startActivity(intent);
             }
         }
     }

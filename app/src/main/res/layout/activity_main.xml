@@ -7,6 +7,13 @@
     tools:context="com.cindy.androidstudy.MainActivity">
 
     <Button
+        android:id="@+id/btn_fcm"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="FCM"
+        android:onClick="onClickButton" />
+
+    <Button
         android:id="@+id/btn_full_screen"
         android:layout_width="match_parent"
         android:layout_height="50dp"
