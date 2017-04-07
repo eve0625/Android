@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.cindy.androidstudy.R;
 import com.google.firebase.iid.FirebaseInstanceId;
 
-public class FCMActivity extends AppCompatActivity {
+public class ResultActivity extends AppCompatActivity {
 
     TextView tvFcmId;
 
