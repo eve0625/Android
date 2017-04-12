@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.cindy.androidstudy.dialog.DialogActivity;
+import com.cindy.androidstudy.fab.FABActivity;
 import com.cindy.androidstudy.fab.FABLibActivity;
 import com.cindy.androidstudy.surfaceview.SurfaceViewActivity;
 import com.cindy.androidstudy.push.SendPushActivity;

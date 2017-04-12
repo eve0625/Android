@@ -64,6 +64,6 @@ public class BatteryActivity extends AppCompatActivity implements View.OnClickLi
         } else if (chargePlug == BatteryManager.BATTERY_PLUGGED_AC) {
             tvBatteryStatus.append(" by AC");
         }
-        
+
     }
 }
