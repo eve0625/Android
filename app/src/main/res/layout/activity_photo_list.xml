@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cindy.androidstudy.photo.PhotoListActivity">
+
+    <LinearLayout
+        android:layout_height="45dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_close"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_close"
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="사진선택"
+            style="?android:textAppearanceLargePopupMenu" />
+
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:text="촬영"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"/>
+
+</LinearLayout>

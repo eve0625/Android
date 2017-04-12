@@ -25,8 +25,7 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/colorAccent" />
 
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".FullScreenActivity" />
         <activity android:name=".surfaceview.SurfaceViewActivity" />
         <activity
@@ -66,15 +65,19 @@
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:taskAffinity="" />
+        <activity android:name=".notification.NotificationActivity"></activity>
+        <activity android:name=".notification.NotiResultActivity" />
+        <activity android:name=".photo.PhotoListActivity" />
+        <activity android:name=".file.FileActivity">
 
-        <activity android:name=".notification.NotificationActivity">
+        </activity>
+        <activity android:name=".device.BatteryActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".notification.NotiResultActivity"></activity>
     </application>
 
 </manifest>
