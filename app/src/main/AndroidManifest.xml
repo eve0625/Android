@@ -65,13 +65,17 @@
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:taskAffinity="" />
-        <activity android:name=".notification.NotificationActivity"></activity>
+        <activity android:name=".notification.NotificationActivity" />
         <activity android:name=".notification.NotiResultActivity" />
         <activity android:name=".photo.PhotoListActivity" />
-        <activity android:name=".file.FileActivity">
-
+        <activity android:name=".file.FileActivity" />
+        <activity android:name=".device.BatteryActivity" />
+        <activity
+            android:name=".device.KeyboardActivity"
+            android:windowSoftInputMode="stateVisible"></activity>
+        <activity android:name=".animation.SlideBackgroundActivity">
         </activity>
-        <activity android:name=".device.BatteryActivity">
+        <activity android:name=".media.MedaiPlayerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
